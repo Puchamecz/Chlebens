@@ -8,7 +8,7 @@ class MapField
     sf::Vector3i position;
     sf::Texture texture;
     sf::Sprite sprite;
-    MapField (int c_x, int c_y, int c_z,)
+    MapField (int c_x, int c_y, int c_z, std::string texture_path)
     {
 
     }
@@ -21,7 +21,7 @@ class MapObject
     sf::Vector3f position;
     sf::Texture image;
     sf::Sprite sprite;
-    MapObject (int c_x, int c_y, int c_z,)
+    MapObject (int c_x, int c_y, int c_z, std::string image_path)
     {
 
     }
