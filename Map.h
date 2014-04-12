@@ -12,10 +12,11 @@ class MapField
         MapField (int c_x, int c_y, int c_z, int texture_index)
         {
             position = sf::Vector3i (c_x, c_y, c_z);
-            texture.loadFromImage (image_bank [texture_index]);
+            texture.loadFromImage (texture_bank [texture_index]);
             texture.setSmooth (true);
             sprite.setTexture (texture);
             sprite.setOrigin (12.5, 12.5);
+            sprite.setPosition (position.x, position.z);
         }
 };
 
@@ -34,6 +35,7 @@ class MapObject
             image.setSmooth (true);
             sprite.setTexture (image);
             sprite.setOrigin (12.5, 12.5);
+            sprite.setPosition (position.x, position.z);
         }
 };
 

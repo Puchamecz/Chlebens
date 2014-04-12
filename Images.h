@@ -6,7 +6,6 @@
 
 std::vector <sf::Image> texture_bank;
 std::vector <sf::Image> image_bank;
-std::ofstream dx ("dx.txt");
 
 void Images_Load ()
 {
@@ -16,8 +15,6 @@ void Images_Load ()
     sf::Image image;
     while (!images_list.eof ())
     {
-        dx<<"Chleb";
-        dx.close ();
         getline (images_list, images_list_line);
         if (vector_switch && images_list_line == "----------------") vector_switch = false;
         if (vector_switch)
@@ -31,6 +28,7 @@ void Images_Load ()
             image_bank [image_bank.size () - 1].loadFromFile ("Img/" + images_list_line + ".png");
         }
     }
+    images_list.close ();
 }
 
 #endif // IMAGES_H_INCLUDED
