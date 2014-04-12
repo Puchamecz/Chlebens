@@ -3,4 +3,5 @@
 
 
 
+
 #endif // EQUIPMENT_H_INCLUDED

@@ -1,24 +1,58 @@
 #ifndef RACES_H_INCLUDED
 #define RACES_H_INCLUDED
-class Limb
+
+#include <vector>
+enum LIMBS {Limbs,Arms,Legs,Wings};
+
+class cLimb
 {
-public:
-    int StrModif;
-    int DexModif;
+    public:
+        int iStrModif;
+        int iDexModif;
+
+        int iNatPenetration;
 }
 };
-class Arm : public Limb
+class cArm : public Limb
 {
-    Arms* Weapon;
+    public:
+        cWeapon* Arms;
 };
-class Race
+class cLeg : public Limb
 {
-public:
-    float Blood;
-protected:
-    float MaxBlood;
+    public:
+        int iSpeed;
+};
+class cWing : public Limb
+{
+    public:
+        int iFlySpeed;
 };
 
+class cRace
+{
+    public:
+        std::string sRaceName;
+        unsigned uLimbsNumber[4];
+        int iSize;
 
+
+};
+class Creature
+{
+    public:
+        std::string sName;
+        cRace* Race;
+//--------------------------
+        int iStr;
+        int iDex;
+        int iInt;
+        int iCha;
+//--------------------------
+
+
+        float fBlood;
+        float fMaxBlood;
+};
 
 #endif // RACES_H_INCLUDED
