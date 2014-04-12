@@ -1,6 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 #include "Map.h"
+#include "Races.h"
 
 sf::RenderWindow window (sf::VideoMode (800, 600), "Chlebens");
 sf::Event event;

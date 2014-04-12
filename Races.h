@@ -18,7 +18,7 @@ class cLimb
 {
     public:
         std::string sNazwa;
-        int iEfficiency
+        int iEfficiency;
         int iStrModif;
         int iDexModif;
         int iNatPenetration;
@@ -56,7 +56,7 @@ class Creature
     public:
         std::string sName;
         cRace* Race;
-        std::vector <cLevel*> Levels
+        std::vector <cLevel*> Levels;
 //--------------------------
         int iStr;
         int iDex;

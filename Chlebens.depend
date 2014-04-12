@@ -11,10 +11,11 @@
 	<SFML/Graphics.hpp>
 	<fstream>
 
-1397328864 source:c:\users\azorixz\documents\github\chlebens\main.cpp
+1397342609 source:c:\users\azorixz\documents\github\chlebens\main.cpp
 	<SFML/Graphics.hpp>
 	<SFML/Window.hpp>
 	"Map.h"
+	"Races.h"
 
 1367997278 c:\users\azorixz\documents\sfml-2.1\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -353,7 +354,12 @@
 1397328864 c:\users\azorixz\documents\github\chlebens\map.h
 	"Images.h"
 
-1397342260 c:\users\azorixz\documents\github\chlebens\images.h
+1397345676 c:\users\azorixz\documents\github\chlebens\images.h
 	<SFML/Graphics.hpp>
 	<fstream>
+
+1397345711 c:\users\azorixz\documents\github\chlebens\races.h
+	"Equipment.h"
+
+1397345435 c:\users\azorixz\documents\github\chlebens\equipment.h
 
