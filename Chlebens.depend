@@ -1,5 +1,13 @@
 # depslib dependency file v1.0
-1397317169 source:e:\github\chlebens\main.cpp
+1397321498 source:e:\github\chlebens\main.cpp
 	<SFML/Graphics.hpp>
 	<SFML/Window.hpp>
+	"Map.h"
+
+1397320804 e:\github\chlebens\map.h
+	"Images.h"
+
+1397321565 e:\github\chlebens\images.h
+	<SFML/Graphics.hpp>
+	<fstream>
 
