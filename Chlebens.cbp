@@ -24,12 +24,39 @@
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
+					<Add library="..\..\SFML-2.1\lib\libsfml-audio.a" />
+					<Add library="..\..\SFML-2.1\lib\libsfml-audio-d.a" />
+					<Add library="..\..\SFML-2.1\lib\libsfml-audio-s.a" />
+					<Add library="..\..\SFML-2.1\lib\libsfml-audio-s-d.a" />
+					<Add library="..\..\SFML-2.1\lib\libsfml-graphics.a" />
+					<Add library="..\..\SFML-2.1\lib\libsfml-graphics-d.a" />
+					<Add library="..\..\SFML-2.1\lib\libsfml-graphics-s.a" />
+					<Add library="..\..\SFML-2.1\lib\libsfml-graphics-s-d.a" />
+					<Add library="..\..\SFML-2.1\lib\libsfml-main.a" />
+					<Add library="..\..\SFML-2.1\lib\libsfml-main-d.a" />
+					<Add library="..\..\SFML-2.1\lib\libsfml-network.a" />
+					<Add library="..\..\SFML-2.1\lib\libsfml-network-d.a" />
+					<Add library="..\..\SFML-2.1\lib\libsfml-network-s.a" />
+					<Add library="..\..\SFML-2.1\lib\libsfml-network-s-d.a" />
+					<Add library="..\..\SFML-2.1\lib\libsfml-system.a" />
+					<Add library="..\..\SFML-2.1\lib\libsfml-system-d.a" />
+					<Add library="..\..\SFML-2.1\lib\libsfml-system-s.a" />
+					<Add library="..\..\SFML-2.1\lib\libsfml-system-s-d.a" />
+					<Add library="..\..\SFML-2.1\lib\libsfml-window.a" />
+					<Add library="..\..\SFML-2.1\lib\libsfml-window-d.a" />
+					<Add library="..\..\SFML-2.1\lib\libsfml-window-s.a" />
+					<Add library="..\..\SFML-2.1\lib\libsfml-window-s-d.a" />
 				</Linker>
 			</Target>
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add option="-DSFML_STATIC" />
+			<Add directory="C:/Users/Azorixz/Documents/SFML-2.1/include" />
 		</Compiler>
+		<Linker>
+			<Add directory="C:/Users/Azorixz/Documents/SFML-2.1/lib" />
+		</Linker>
 		<Unit filename="Equipment.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
