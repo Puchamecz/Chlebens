@@ -4,27 +4,27 @@
 #include <SFML/Graphics.hpp>
 #include <fstream>
 
-std::vector <sf::Image> texture_bank;
-std::vector <sf::Image> image_bank;
+std::vector <sf::Texture> texture_bank;
+std::vector <sf::Texture> image_bank;
 
 void Images_Load ()
 {
     std::ifstream images_list ("Img/Images_List.txt");
     std::string images_list_line;
     bool vector_switch = true;
-    sf::Image image;
+    sf::Texture texture;
     while (!images_list.eof ())
     {
         getline (images_list, images_list_line);
         if (vector_switch && images_list_line == "----------------") vector_switch = false;
         if (vector_switch)
         {
-            texture_bank.push_back (image);
+            texture_bank.push_back (texture);
             texture_bank [texture_bank.size () - 1].loadFromFile ("Img/" + images_list_line + ".png");
         }
         else
         {
-            image_bank.push_back (image);
+            image_bank.push_back (texture);
             image_bank [image_bank.size () - 1].loadFromFile ("Img/" + images_list_line + ".png");
         }
     }
