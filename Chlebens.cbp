@@ -52,11 +52,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-DSFML_STATIC" />
-			<Add directory="C:/Users/Azorixz/Documents/SFML-2.1/include" />
 		</Compiler>
-		<Linker>
-			<Add directory="C:/Users/Azorixz/Documents/SFML-2.1/lib" />
-		</Linker>
 		<Unit filename="Equipment.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
