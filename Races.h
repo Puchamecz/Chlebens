@@ -48,6 +48,12 @@ class cRace
         unsigned uLimbsNumber[4];
         int iSize;
         float fRaceBlood;
+
+        unsigned uStrModif;
+        unsigned uDexModif;
+        unsigned uConModif;
+        unsigned uIntModif;
+        unsigned uChaModif;
 //--------------------------
         std::vector <cSkill*> vRaceSkills;
 
@@ -60,17 +66,17 @@ class Creature
         cRace* pRace;
         std::vector <cLevel*> Levels;
 //--------------------------
-        int iStr;
-        int iDex;
-        int iCon;
-        int iInt;
-        int iCha;
+        unsigned uStr;
+        unsigned uDex;
+        unsigned uCon;
+        unsigned uInt;
+        unsigned uCha;
     protected:
-        int iBaseStrPoints;
-        int iBaseDexPoints;
-        int iBaseConPoints;
-        int iBaseIntPoints;
-        int iBaseChaPoints;
+        unsigned uBaseStrPoints;
+        unsigned uBaseDexPoints;
+        unsigned uBaseConPoints;
+        unsigned uBaseIntPoints;
+        unsigned uBaseChaPoints;
 //--------------------------
     public:
         float fBlood;
@@ -87,10 +93,10 @@ class Creature
         std::vector <cLeg> vLegs;
         std::vector <cWing> vWings;
 //---------------------------
-        Creature (std::string,cRace*,int,int,int,int,int);
+        Creature (std::string,cRace*,unsigned,unsigned,unsigned,unsigned,unsigned);
 };
 
-Creature::Creature(std::string sGivedName,cRace* pGivedRace,int iGivedStr,int iGivedDex,int iGivedCon, int iGivedInt, int iGivedCha)
+Creature::Creature(std::string sGivedName,cRace* pGivedRace,unsigned uGivedStr,unsigned uGivedDex,unsigned uGivedCon, unsigned uGivedInt, unsigned uGivedCha)
 {
     sName = sGivedName;
     pRace = pGivedRace;
@@ -102,12 +108,11 @@ Creature::Creature(std::string sGivedName,cRace* pGivedRace,int iGivedStr,int iG
 
     fBaseBlood = pRace->fRaceBlood;
 
-    iBaseStrPoints = iGivedStr;
-    iBaseConPoints = iGivedCon;
-    iBaseDexPoints = iGivedDex;
-    iBaseIntPoints = iGivedInt;
-    iBaseChaPoints = iGivedCha;
-
+    uBaseStrPoints = uGivedStr;
+    uBaseConPoints = uGivedCon;
+    uBaseDexPoints = uGivedDex;
+    uBaseIntPoints = uGivedInt;
+    uBaseChaPoints = uGivedCha;
 
 
 }
