@@ -359,7 +359,8 @@
 	<SFML/Graphics.hpp>
 	<fstream>
 
-1397345711 c:\users\azorixz\documents\github\chlebens\races.h
+1397390366 c:\users\azorixz\documents\github\chlebens\races.h
+	<cmath>
 	"Equipment.h"
 
 1397345435 c:\users\azorixz\documents\github\chlebens\equipment.h
