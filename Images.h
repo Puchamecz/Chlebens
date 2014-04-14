@@ -2,6 +2,7 @@
 #define IMAGES_H_INCLUDED
 
 #include <SFML/Graphics.hpp>
+#include <SFML/OpenGL.hpp>
 #include <fstream>
 
 std::vector <sf::Texture> texture_bank;

@@ -1,15 +1,16 @@
 # depslib dependency file v1.0
-1397417089 source:e:\github\chlebens\main.cpp
+1397502138 source:e:\github\chlebens\main.cpp
 	<SFML/Graphics.hpp>
 	<SFML/Window.hpp>
 	"Map.h"
 	"Races.h"
 
-1397419121 e:\github\chlebens\map.h
+1397502235 e:\github\chlebens\map.h
 	"Images.h"
 
-1397416365 e:\github\chlebens\images.h
+1397491860 e:\github\chlebens\images.h
 	<SFML/Graphics.hpp>
+	<SFML/OpenGL.hpp>
 	<fstream>
 
 1397342609 source:c:\users\azorixz\documents\github\chlebens\main.cpp
