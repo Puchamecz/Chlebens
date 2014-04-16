@@ -6,7 +6,7 @@
 //GLint universal_field_verticies [24] = {-16, -16, 0,  16, -16, 0,  16, 16, 0,  -16, 16, 0,  -16, -16, 32,  16, -16, 32,  16, 16, 32,  -16, 16, 32};
 
 GLint universal_field_verticies [72] = {-16, -16, 0,  16, -16, 0,  16, 16, 0,  -16, 16, 0,
-                                        -16, -16, 32,  16, -16, 32,  16, -16, 32,  -16, -16, 32,
+                                        -16, -16, 0,  16, -16, 0,  16, -16, 32,  -16, -16, 32,
                                         16, -16, 0,  16, 16, 0,  16, 16, 32,  16, -16, 32,
                                         16, 16, 0,  -16, 16, 0,  -16, 16, 32,  16, 16, 32,
                                         -16, 16, 0,  -16, -16, 0,  -16, -16, 32,  -16, 16, 32,
@@ -35,8 +35,8 @@ class MapField
             {
                 model_verticies [3 * i] = universal_field_verticies [3 * i] + position.x * 32;
                 model_verticies [3 * i + 1] = universal_field_verticies [3 * i + 1] + position.y * 32;
-                if (i <= 11) model_verticies [3 * i + 2] = universal_field_verticies [3 * i + 2];
-                else model_verticies [3 * i + 2] = universal_field_verticies [3 * i + 2] + position.z * 32;
+                if (universal_field_verticies [3 * i + 2] == 32) model_verticies [3 * i + 2] = universal_field_verticies [3 * i + 2] + position.z * 32;
+                else model_verticies [3 * i + 2] = 0;
             }
         }
 };

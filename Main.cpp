@@ -10,12 +10,15 @@ GLfloat colors [] = {1, 1, 1,  0, 0, 1,  1, 1, 0,  0, 1, 0,  1, 0, 0,  1, 0, 1, 
 int main ()
 {
     glEnable (GL_TEXTURE_2D);
+    glEnable (GL_DEPTH_TEST);
     glMatrixMode (GL_PROJECTION);
     glLoadIdentity ();
-    gluPerspective (90, 1.0f, 0, -64*32);
+    gluPerspective (90, 1.33333333f, 1, 64*32);
     glMatrixMode (GL_MODELVIEW);
     glLoadIdentity ();
     glTranslatef (0, 0, -10*32);
+    sf::Texture tex;
+    tex.loadFromFile ("Img/1.png");
     Images_Load ();
     Map_Load ("Maps/1.txt", "Maps/11.txt");
     while (window.isOpen ())
@@ -62,7 +65,7 @@ int main ()
         glEnableClientState (GL_TEXTURE_COORD_ARRAY);
         for (int i = 0; i < map_surface.size (); i++)
         {
-            sf::Texture::bind (&texture_bank [map_surface [i]->main_type]);
+            sf::Texture::bind (&texture_bank [map_surface [i]->main_type], sf::Texture::Pixels);
             glTexCoordPointer (2, GL_INT, 0, universal_field_texture_coordinates_verticies);
             glVertexPointer (3, GL_INT, 0, map_surface [i]->model_verticies);
             glDrawArrays (GL_QUADS, 0, 24);
