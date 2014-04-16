@@ -4,6 +4,7 @@
 #include "Equipment.h"
 
 enum LIMBS {Limbs,Arms,Legs,Wings};
+enum SIZE {Small=1,Medium=2,Big=3};
 
 class cLevel
 {
@@ -46,7 +47,7 @@ class cRace
     public:
         std::string sRaceName;
         unsigned uLimbsNumber[4];
-        int iSize;
+        SIZE sSize;
         float fRaceBlood;
 
         unsigned uStrModif;
@@ -114,7 +115,11 @@ Creature::Creature(std::string sGivedName,cRace* pGivedRace,unsigned uGivedStr,u
     uBaseIntPoints = uGivedInt;
     uBaseChaPoints = uGivedCha;
 
-
+    uStr = uBaseStrPoints * pRace->uStrModif;
+    uDex = uBaseDexPoints * pRace->uDexModif;
+    uCon = uBaseConPoints * pRace->uConModif;
+    uInt = uBaseIntPoints * pRace->uIntModif;
+    uCha = uBaseChaPoints * pRace->uChaModif;
 }
 
 
